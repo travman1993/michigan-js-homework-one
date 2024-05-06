@@ -7,8 +7,12 @@
 	<script src = "gallery.js"></script>
 </head>
 <body>
-	<div id = "image" onload="loadUp" onfocus="focusUp" onblur="blurUp">
+	<div id = "image" onload="loadUp">
 		Hover over an image below to display here.
+	</div>
+	<div id="answerBox">
+	    <label for="name">Number:</label>
+		<input type="text" id="favorite" placeholder="Which Photo" onfocus="focusUp(this)" onblur="blurUp(this)">
 	</div>
 	<img class = "preview" tabindex="1" alt = "Team Huddle" src = "https://cdn.vox-cdn.com/thumbor/96QsmtOUvbD76rP6zKz7Q44iG_s=/0x0:4785x3190/1820x1213/filters:focal(1771x1071:2535x1835):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/73110644/1954096006.0.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()">
 	<img class = "preview" tabindex="2" alt = "Coming on the Field" src = "https://cdn.vox-cdn.com/thumbor/VNH1HgJRsT4BY7IaDckAuT0__A0=/0x0:532x382/1820x1213/filters:focal(322x120:406x204):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/71852092/1447713256.0.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()">

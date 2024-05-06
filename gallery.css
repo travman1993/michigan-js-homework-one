@@ -20,6 +20,13 @@ background-size: 100%;
 margin-bottom: 10px;
 font-size: 100%;
 }
+
+#answerBox {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
 .preview{
     width:10%;
     margin-left:17%;

@@ -17,6 +17,13 @@ window.onload = function() {
     const img = document.createElement("img");
     img.src = randomUrl;
     document.getElementById("image").appendChild(img);
+    const images = document.getElementsByTagName("img");
+    for(let i = 0; i < images.length; i++) {
+        images[i].setAttribute("tabindex", i);
+        images[i].addEventListener("focus", function() {
+            upDate(this);
+        });
+    }
 }
 
 function upDate(previewPic){
@@ -24,15 +31,18 @@ function upDate(previewPic){
     show.style.backgroundImage = "url('" + previewPic.src + "')";
     show.innerHTML = previewPic.alt;
 }
-   
+
 function unDo(){
     const none = document.getElementById("image");
     none.style.backgroundImage = "url('')";
     none.innerHTML = "Hover over an image below to display here.";
 }
 
-function focusUp(){
+function focusUp(a){
+    a.style.background = "lightblue";
 }
 
 function blurUp(){
+    let text = document.getElementById("favorite");
+    text.value = text.value.toUpperCase();
 }
